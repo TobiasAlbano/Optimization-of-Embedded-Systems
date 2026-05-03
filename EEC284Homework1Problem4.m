@@ -15,7 +15,7 @@ x = sin(2*pi*100*t) + 10 * sin(2*pi*75*t + pi/2);
 % Plotting the input signal over time
 figure;
 plot(t(1:50), x(1:50));
-xlabel("Miliseconds");
+xlabel("Seconds");
 ylabel("Amplitude");
 title("Input Signal in Time Domain");
 
@@ -53,10 +53,10 @@ for i = 1:length(sigmas)
     Xs{i} = x_n;
 
     subplot(length(sigmas), 1, i);
-    plot(sample_times(1:500), x_n(1:500));
+    plot(sample_times(1:50), x_n(1:50));
     
     title(sprintf("Noisy Signal (\\sigma = %.1f)", sigma));
-    xlabel("Time");
+    xlabel("Time (S)");
     ylabel("Amplitude");
 
 end
